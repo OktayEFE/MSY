@@ -13,19 +13,10 @@ namespace DataAccessLayer.Concrete
         #region MSSQL BAĞLANTI
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer("server=localhost;database=msydb;integrated security=true;user=sa;password=Semok5565");
+            optionsBuilder.UseNpgsql("User ID=sa;Password=Oktay@1234;Server=localhost;Port=5432;Database=dbname;Integrated Security=true;Pooling=true;");
         }
         #endregion
-        #region POSTGRE SQL BAĞLANTI
-        //public Context(DbContextOptions<Context> options)
-        //    : base(options)
-        //{
-        //}
-        //protected override void OnModelCreating(ModelBuilder modelBuilder)
-        //{
-        //    modelBuilder.UseSerialColumns();
-        //}
-        #endregion
+       
         public DbSet<About> Abouts { get; set; }
         public DbSet<Blog> Blogs { get; set; }
         public DbSet<Category> Categories { get; set; }
