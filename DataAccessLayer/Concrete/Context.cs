@@ -13,7 +13,7 @@ namespace DataAccessLayer.Concrete
         #region MSSQL BAĞLANTI
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseNpgsql("User ID=sa;Password=Oktay@1234;Server=localhost;Port=5432;Database=dbname;Integrated Security=true;Pooling=true;");
+            optionsBuilder.UseNpgsql("User ID=postgres;Password=Oktay@1234;Server=localhost;Port=5432;Database=dbname;Integrated Security=true;Pooling=true;");
         }
         #endregion
        
