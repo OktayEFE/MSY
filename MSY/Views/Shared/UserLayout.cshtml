@@ -12,17 +12,18 @@
     <meta name="keywords" content="Weblog a Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template,
 Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
 
-    <script>
-        addEventListener("load", function() {
+    <script>addEventListener("load", function () {
             setTimeout(hideURLbar, 0);
         }, false);
 
         function hideURLbar() {
             window.scrollTo(0, 1);
-        }
-    </script>
+        }</script>
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     <script src="~/lib/jquery/dist/jquery.js"></script>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/MSY.styles.css" asp-append-version="true" />
 
     <link href="~/MYSBlogTema/css/bootstrap.css" rel='stylesheet' type='text/css' />
     <link rel="stylesheet" href="~/MYSBlogTema/css/single.css">
@@ -91,20 +92,17 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
     <!--/ start-smoth-scrolling -->
     <script src="~/MYSBlogTema/js/move-top.js"></script>
     <script src="~/MYSBlogTema/js/easing.js"></script>
-    <script>
-        jQuery(document).ready(function($) {
-            $(".scroll").click(function(event) {
+    <script>jQuery(document).ready(function ($) {
+            $(".scroll").click(function (event) {
                 event.preventDefault();
                 $('html,body').animate({
                     scrollTop: $(this.hash).offset().top
                 }, 900);
             });
-        });
-    </script>
+        });</script>
     <!--// end-smoth-scrolling -->
 
-    <script>
-        $(document).ready(function() {
+    <script>$(document).ready(function () {
             /*
                                     var defaults = {
                                             containerID: 'toTop', // fading element id
@@ -118,15 +116,17 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                 easingType: 'easeOutQuart'
             });
 
-        });
-    </script>
+        });</script>
     <a href="#home" class="scroll" id="toTop" style="display: block;">
         <span id="toTopHover" style="opacity: 1;"> </span>
     </a>
 
     <!-- //Custom-JavaScript-File-Links -->
     <script src="~/MYSBlogTema/js/bootstrap.js"></script>
-
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
 
 </body>
 

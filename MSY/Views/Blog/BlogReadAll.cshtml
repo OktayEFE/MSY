@@ -56,8 +56,8 @@
                             <a href="/Blog/Index" class="btn btn-primary read-m">Blog Listesi</a>
                         </div>
                     }
-                    @await Component.InvokeAsync("CommentListByBlog",new { id=ViewBag.BlogId} )
-                    @await Html.PartialAsync("~/Views/Comment/PartialAddComment.cshtml")
+                @await Component.InvokeAsync("CommentListByBlog",new { id=ViewBag.BlogId} )
+                @await Html.PartialAsync("~/Views/Comment/PartialAddComment.cshtml")
 
                 </div>
             </div>
@@ -80,7 +80,7 @@
                     </div>
                     
 
-                    @await Component.InvokeAsync("CategoryList" )
+                    @await Component.InvokeAsync("CategoryList")
 
 
                     <div class="tech-btm">

@@ -6,6 +6,8 @@
 
   <ItemGroup>
     <None Remove="Npgsql.EntityFrameworkCore.PostgreSQL" />
+    <None Remove="ViewComponents\Comment\" />
+    <None Remove="ViewComponents\Category\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Views\Home\Index.cshtml" />
@@ -33,4 +35,8 @@
     <ProjectReference Include="..\BusinessLayer\BusinessLayer.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="ViewComponents\Comment\" />
+    <Folder Include="ViewComponents\Category\" />
+  </ItemGroup>
 </Project>
