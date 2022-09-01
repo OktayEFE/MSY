@@ -8,6 +8,8 @@
     <None Remove="Npgsql.EntityFrameworkCore.PostgreSQL" />
     <None Remove="ViewComponents\Comment\" />
     <None Remove="ViewComponents\Category\" />
+    <None Remove="FluentValidation.DependencyInjectionExtensions" />
+    <None Remove="FluentValidation" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Views\Home\Index.cshtml" />
@@ -29,6 +31,8 @@
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
     <PackageReference Include="Npgsql.EntityFrameworkCore.PostgreSQL" Version="6.0.6" />
+    <PackageReference Include="FluentValidation.DependencyInjectionExtensions" Version="11.2.1" />
+    <PackageReference Include="FluentValidation" Version="11.2.1" />
   </ItemGroup>
 
   <ItemGroup>
