@@ -10,6 +10,13 @@
     <None Remove="ViewComponents\Category\" />
     <None Remove="FluentValidation.DependencyInjectionExtensions" />
     <None Remove="FluentValidation" />
+    <None Remove="Views\Login\" />
+    <None Remove="ViewComponents\Blog\" />
+    <None Remove="Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation" />
+    <None Remove="Views\Shared\Components\WriterLastBlog\" />
+    <None Remove="Microsoft.VisualStudio.Web.CodeGeneration.Design" />
+    <None Remove="Microsoft.EntityFrameworkCore.Sqlite" />
+    <None Remove="Swashbuckle.AspNetCore" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Views\Home\Index.cshtml" />
@@ -33,6 +40,10 @@
     <PackageReference Include="Npgsql.EntityFrameworkCore.PostgreSQL" Version="6.0.6" />
     <PackageReference Include="FluentValidation.DependencyInjectionExtensions" Version="11.2.1" />
     <PackageReference Include="FluentValidation" Version="11.2.1" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation" Version="6.0.8" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="6.0.8" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="6.0.8" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.3.0" />
   </ItemGroup>
 
   <ItemGroup>
@@ -42,5 +53,8 @@
   <ItemGroup>
     <Folder Include="ViewComponents\Comment\" />
     <Folder Include="ViewComponents\Category\" />
+    <Folder Include="Views\Login\" />
+    <Folder Include="ViewComponents\Blog\" />
+    <Folder Include="Views\Shared\Components\WriterLastBlog\" />
   </ItemGroup>
 </Project>
