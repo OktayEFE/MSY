@@ -6,18 +6,21 @@
         <div>
             <p>İlk Yorumu Siz Yazın</p>
         </div>
-        return;
     }
-    @foreach (var item in Model)
+    else
     {
-        <div class="media">
-            <img src="~/MYSBlogTema/images/t1.jpg" alt="" class="img-fluid" />
-            <div class="media-body">
-                <h5 class="mt-0">@item.CommentUserName</h5>
-                <p>
-                    @item.CommentContent
-                </p>
+        @foreach (var item in Model)
+        {
+            <div class="media">
+                <img src="~/MYSBlogTema/images/t1.jpg" alt="" class="img-fluid" />
+                <div class="media-body">
+                    <h5 class="mt-0">@item.CommentUserName</h5>
+                    <p>
+                        @item.CommentContent
+                    </p>
+                </div>
             </div>
-        </div>
+        }
     }
+
 </div>

@@ -1,5 +1,7 @@
-﻿using BusinessLayer.Concrete;
+﻿using System;
+using BusinessLayer.Concrete;
 using DataAccessLayer.EntityFramework;
+using EntityLayer.Concrete;
 using Microsoft.AspNetCore.Mvc;
 
 namespace MSY.Controllers
@@ -12,9 +14,19 @@ namespace MSY.Controllers
         {
             return View();
         }
+		[HttpGet]
         public IActionResult PartialAddComment()
         {
             return PartialView();
+        }
+        [HttpPost]
+        public JsonResult PartialAddComment(Comment _comment)
+        {
+            _comment.CommentDate = DateTime.Parse(DateTime.UtcNow.ToLocalTime().ToShortDateString());
+            _comment.CommentStatus = true;
+            _comment.BlogId = 2;
+            _commentManager.CommentAdd(_comment);
+            return Json("Ok");
         }
         public IActionResult CommentListByBlog(int id)
         {

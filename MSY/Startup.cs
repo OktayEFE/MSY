@@ -39,8 +39,8 @@ namespace MSY
                 // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
                 app.UseHsts();
             }
-
-            app.UseStatusCodePagesWithReExecute("/ErrorPage/ErrorStatus","?code={0}");
+			AppContext.SetSwitch("Npgsql.EnableLegacyTimestampBehavior", true);
+			app.UseStatusCodePagesWithReExecute("/ErrorPage/ErrorStatus","?code={0}");
             app.UseHttpsRedirection();
             app.UseStaticFiles();
 
