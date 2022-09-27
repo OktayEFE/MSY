@@ -22,8 +22,8 @@ namespace MSY.Controllers
         [HttpPost]
         public JsonResult PartialAddComment(Comment _comment)
         {
-            _comment.CommentDate = DateTime.Parse(DateTime.UtcNow.ToLocalTime().ToShortDateString());
-            _comment.CommentStatus = true;
+            _comment.CommentDate = DateTime.Parse(DateTime.Now.ToShortDateString());
+			_comment.CommentStatus = true;
             _comment.BlogId = 2;
             _commentManager.CommentAdd(_comment);
             return Json("Ok");
