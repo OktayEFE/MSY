@@ -10,7 +10,7 @@ namespace DataAccessLayer.Concrete
 {
     public class Context : DbContext
     {
-        #region MSSQL BAĞLANTI
+        #region Postgresql BAĞLANTI
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             optionsBuilder.UseNpgsql("User ID=postgres;Password=Oktay@1234;Server=localhost;Port=5432;Database=MSY;Integrated Security=true;Pooling=true;");
